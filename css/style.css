@@ -2005,3 +2005,78 @@ p {
         text-align: left;
     }
 }
+
+/* FINAL FIX: mobile menu must be above fixed header */
+[data-site-header] .mobile-menu,
+.mobile-menu {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 50000 !important;
+}
+
+.mobile-menu__backdrop {
+    z-index: 1 !important;
+}
+
+.mobile-menu__panel {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.mobile-menu__top {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 76px !important;
+    padding: 18px 20px !important;
+    background: rgba(23, 23, 23, 0.98) !important;
+}
+
+.mobile-menu-close {
+    position: relative !important;
+    z-index: 20 !important;
+    display: inline-flex !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+    flex: 0 0 46px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid rgba(214, 154, 91, 0.6) !important;
+    border-radius: 999px !important;
+    background: rgba(184, 115, 51, 0.24) !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+/* рисуем крестик CSS-ом, без lucide и без svg */
+.mobile-menu-close svg,
+.mobile-menu-close i {
+    display: none !important;
+}
+
+.mobile-menu-close::before,
+.mobile-menu-close::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 22px !important;
+    height: 2.5px !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+}
+
+.mobile-menu-close::before {
+    transform: translate(-50%, -50%) rotate(45deg) !important;
+}
+
+.mobile-menu-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg) !important;
+}

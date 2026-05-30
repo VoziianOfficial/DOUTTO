@@ -288,8 +288,12 @@
                         </a>
 
                         <button class="mobile-menu-close" type="button" aria-label="Close mobile menu" data-mobile-menu-close>
-                            <i data-lucide="x" aria-hidden="true"></i>
-                        </button>
+    <svg class="mobile-menu-close__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M6 6L18 18M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+</button>
+
+                        
                     </div>
 
                     <div class="mobile-menu__content">
