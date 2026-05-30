@@ -1532,3 +1532,40 @@
         transform: translateY(-3px) !important;
     }
 }
+
+/* RESPONSIVE REDESIGN: HOME ISSUES GRID */
+@media (max-width: 1024px) {
+    .home-issues {
+        padding-top: 64px !important;
+        padding-bottom: 64px !important;
+    }
+
+    .home-issues__strip {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+
+    .home-issues .issue-pill {
+        min-height: 132px !important;
+        padding: 16px 12px !important;
+        border-radius: 22px !important;
+    }
+
+    .home-issues .issue-pill__icon {
+        width: 58px !important;
+        height: 58px !important;
+        border-radius: 19px !important;
+    }
+
+    .home-issues .issue-pill__icon svg {
+        width: 31px !important;
+        height: 31px !important;
+    }
+
+    .home-issues .issue-pill span:last-child {
+        margin-top: 10px !important;
+        font-size: 0.9rem !important;
+        line-height: 1.25 !important;
+    }
+}

@@ -420,7 +420,6 @@
 
 .about-marquee__heading h2 {
     margin-inline: auto;
-    max-width: 720px;
     font-family: var(--font-heading);
     font-size: clamp(2rem, 4vw, 2.875rem);
     line-height: 1.08;
@@ -833,5 +832,255 @@
     .about-cta__inner {
         min-height: 380px;
         padding: 68px 0;
+    }
+}
+
+/* ABOUT MODEL: compact cards with right-side icons */
+.about-model__grid {
+    gap: 14px;
+}
+
+.about-model__card {
+    position: relative;
+    min-height: 190px !important;
+    overflow: hidden;
+    padding: 22px 78px 22px 22px !important;
+    border-radius: 22px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(247, 244, 239, 0.78)),
+        var(--color-white);
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background-color var(--transition);
+}
+
+.about-model__card::before {
+    left: 22px;
+    width: 52px;
+    transition: width var(--transition);
+}
+
+.about-model__card::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    width: 46px;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: var(--color-copper);
+    transition: transform var(--transition);
+}
+
+.about-model__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 46px;
+    height: 34px;
+    border: 1px solid rgba(184, 115, 51, 0.18);
+    border-radius: 999px;
+    background: rgba(184, 115, 51, 0.08);
+    color: var(--color-copper-deep);
+    font-size: 1rem !important;
+    line-height: 1;
+}
+
+.about-model__card>svg {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 42px !important;
+    height: 42px !important;
+    margin-top: 0 !important;
+    padding: 10px;
+    border: 1px solid rgba(184, 115, 51, 0.22);
+    border-radius: 15px;
+    background: rgba(184, 115, 51, 0.1);
+    color: var(--color-copper);
+    transition:
+        transform var(--transition),
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.about-model__card h3 {
+    margin-top: 20px !important;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.about-model__card p {
+    margin-top: 9px !important;
+    font-size: 0.86rem;
+    line-height: 1.55;
+}
+
+/* hover */
+.about-model__card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(184, 115, 51, 0.36);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+}
+
+.about-model__card:hover::before {
+    width: 86px;
+}
+
+.about-model__card:hover::after {
+    transform: scaleX(1);
+}
+
+.about-model__card:hover>svg {
+    transform: translateY(-2px) rotate(4deg) scale(1.06);
+    background: var(--color-copper);
+    border-color: var(--color-copper);
+    color: var(--color-white);
+    box-shadow: 0 14px 30px rgba(184, 115, 51, 0.28);
+}
+
+.about-model__card:hover .about-model__number {
+    border-color: rgba(184, 115, 51, 0.34);
+    background: rgba(184, 115, 51, 0.14);
+}
+
+/* ABOUT VERIFICATION + VALUES: compact cards with right-side icons */
+.about-verification__checks article,
+.about-values__card {
+    position: relative;
+    overflow: hidden;
+    min-height: 15px !important;
+    padding: 22px 78px 22px 22px !important;
+    border-radius: 22px;
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background-color var(--transition);
+}
+
+.about-verification__checks article::before,
+.about-values__card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(184, 115, 51, 0.16), transparent 34%),
+        linear-gradient(90deg, transparent, rgba(184, 115, 51, 0.055));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+}
+
+.about-verification__checks article::after,
+.about-values__card::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    width: 46px;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: var(--color-copper);
+    transition: transform var(--transition);
+}
+
+.about-verification__checks article>svg,
+.about-values__card>svg {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 42px !important;
+    height: 42px !important;
+    margin-top: 0 !important;
+    padding: 10px;
+    border: 1px solid rgba(184, 115, 51, 0.22);
+    border-radius: 15px;
+    background: rgba(184, 115, 51, 0.1);
+    color: var(--color-copper);
+    transition:
+        transform var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
+}
+
+.about-verification__checks article h3,
+.about-values__card h3 {
+    margin-top: 0 !important;
+    max-width: 230px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.about-verification__checks article p,
+.about-values__card p {
+    margin-top: 9px !important;
+    font-size: 0.86rem;
+    line-height: 1.55;
+}
+
+/* hover */
+.about-verification__checks article:hover,
+.about-values__card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(184, 115, 51, 0.36);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+}
+
+.about-verification__checks article:hover::before,
+.about-values__card:hover::before {
+    opacity: 1;
+}
+
+.about-verification__checks article:hover::after,
+.about-values__card:hover::after {
+    transform: scaleX(1);
+}
+
+.about-verification__checks article:hover>svg,
+.about-values__card:hover>svg {
+    transform: translateY(-2px) rotate(4deg) scale(1.06);
+    background: var(--color-copper);
+    border-color: var(--color-copper);
+    color: var(--color-white);
+    box-shadow: 0 14px 30px rgba(184, 115, 51, 0.28);
+}
+
+.about-verification__checks article:hover h3,
+.about-values__card:hover h3 {
+    color: var(--color-copper-deep);
+}
+
+/* ABOUT: reduce vertical padding by half */
+.about-verification,
+.about-values {
+    padding-top: 46px !important;
+    padding-bottom: 46px !important;
+}
+
+@media (max-width: 768px) {
+
+    .about-verification,
+    .about-values {
+        padding-top: 34px !important;
+        padding-bottom: 34px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .about-verification,
+    .about-values {
+        padding-top: 29px !important;
+        padding-bottom: 29px !important;
     }
 }
