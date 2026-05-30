@@ -536,34 +536,35 @@
     function renderServiceCards() {
         document.querySelectorAll(SELECTORS.serviceCards).forEach((mount) => {
             const variant = mount.dataset.serviceCards || 'default';
-
             mount.innerHTML = config.services.map((service) => {
+                const isHomeCards = variant === 'home';
+
                 return `
-                    <a class="service-card service-card--${escapeHtml(service.id)}" href="./${escapeHtml(service.href)}" style="--service-image: url('${escapeHtml(service.image)}');">
-                        <span class="service-card__scanner" aria-hidden="true"></span>
+        <a class="service-card ${isHomeCards ? 'service-card--home' : ''} service-card--${escapeHtml(service.id)}" href="./${escapeHtml(service.href)}" style="--service-image: url('${escapeHtml(service.image)}');">
+            <span class="service-card__scanner" aria-hidden="true"></span>
 
-                        <span class="service-card__icon" aria-hidden="true">
-                            <i data-lucide="${escapeHtml(service.icon)}"></i>
-                        </span>
+            <span class="service-card__icon" aria-hidden="true">
+                <i data-lucide="${escapeHtml(service.icon)}"></i>
+            </span>
 
-                        <span class="service-card__content">
-                            <span class="service-card__label">${variant === 'home' ? 'Compare category' : 'Provider options'}</span>
+            <span class="service-card__content">
+                <span class="service-card__label">${isHomeCards ? 'Appliance category' : 'Provider options'}</span>
 
-                            <span class="service-card__title-wrap">
-                                <h3>${escapeHtml(service.title)}</h3>
-                            </span>
+                <span class="service-card__title-wrap">
+                    <h3>${escapeHtml(service.title)}</h3>
+                </span>
 
-                            <span class="service-card__line" aria-hidden="true"></span>
+                <span class="service-card__line" aria-hidden="true"></span>
 
-                            <p>${escapeHtml(service.summary)}</p>
+                ${isHomeCards ? '' : `<p>${escapeHtml(service.summary)}</p>`}
 
-                            <span class="service-card__cta">
-                                Explore service
-                                <i data-lucide="arrow-right" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                    </a>
-                `;
+                <span class="service-card__cta">
+                    Explore service
+                    <i data-lucide="arrow-right" aria-hidden="true"></i>
+                </span>
+            </span>
+        </a>
+    `;
             }).join('');
         });
     }

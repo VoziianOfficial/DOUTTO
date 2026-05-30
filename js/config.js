@@ -131,7 +131,7 @@ window.SITE_CONFIG = {
 
         {
             id: 'washer-dryer',
-            title: 'Washer & Dryer Repair',
+            title: 'Washer & Dryer',
             shortTitle: 'Washer & Dryer',
             href: 'washer-dryer-repair.html',
             image: './assets/images/washer-dryer-repair.jpg',
@@ -303,7 +303,7 @@ window.SITE_CONFIG = {
 
         {
             id: 'oven-range',
-            title: 'Oven & Range Repair',
+            title: 'Oven & Range',
             shortTitle: 'Oven & Range',
             href: 'oven-range-repair.html',
             image: './assets/images/oven-range-repair.jpg',
