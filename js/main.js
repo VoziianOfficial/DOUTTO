@@ -542,17 +542,11 @@
         setText('[data-email-text]', contact.email);
         setText('[data-support-hours]', contact.supportHours);
 
-        /*
-            Если в header кнопка должна быть "Call Now", а не номер,
-            этот код вернет ей текст из phoneButtonText.
-        */
+     
         document.querySelectorAll('.header-phone [data-phone-text]').forEach((element) => {
             element.textContent = contact.phoneButtonText || contact.phoneDisplay;
         });
 
-        /*
-            2) Обновляем ссылки tel: и mailto:
-        */
         document.querySelectorAll('[data-phone-link], a[href^="tel:"]').forEach((link) => {
             link.setAttribute('href', `tel:${contact.phoneRaw}`);
         });
@@ -561,10 +555,7 @@
             link.setAttribute('href', `mailto:${contact.email}`);
         });
 
-        /*
-            3) Глобальная замена в обычных текстах,
-            где нет data-company-name / data-phone-text / data-email-text.
-        */
+   
         const replacements = createGlobalReplacements(defaultTokens, company, contact);
 
         replaceTextInDom(document.body, replacements);
