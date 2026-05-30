@@ -306,7 +306,7 @@ window.SITE_CONFIG = {
             title: 'Oven & Range',
             shortTitle: 'Oven & Range',
             href: 'oven-range-repair.html',
-            image: './assets/images/oven-range-repair.jpg',
+            image: '../assets/images/oven-range-repair.jpg',
             icon: 'cooking-pot',
             summary: 'Compare repair providers for heating issues, burners, temperature problems, and range performance concerns.',
             dropdownText: 'Heating, burners, ignition and temperature concerns.',
@@ -321,7 +321,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'heating-issues',
                     label: 'Heating Issues',
-                    image: './assets/images/oven-range-repair.jpg',
+                    image: '../assets/images/oven-range-repair.jpg',
                     title: 'Oven heating concerns',
                     text: 'Compare providers for ovens that do not heat, heat slowly, overheat, or stop during cooking cycles.',
                     compare: [
@@ -334,7 +334,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'burners',
                     label: 'Burners',
-                    image: './assets/images/oven-range-repair.jpg',
+                    image: '../assets/images/oven-range-repair.jpg',
                     title: 'Range burner problems',
                     text: 'Explore providers for burners that will not light, heat unevenly, click repeatedly, or respond inconsistently.',
                     compare: [
@@ -347,7 +347,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'temperature-control',
                     label: 'Temperature Control',
-                    image: './assets/images/oven-range-repair.jpg',
+                    image: '../assets/images/oven-range-repair.jpg',
                     title: 'Temperature control issues',
                     text: 'Review provider options for temperature swings, inaccurate readings, sensor concerns, or inconsistent baking results.',
                     compare: [
@@ -360,7 +360,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'ignition',
                     label: 'Ignition',
-                    image: './assets/images/oven-range-repair.jpg',
+                    image: '../assets/images/oven-range-repair.jpg',
                     title: 'Ignition concerns',
                     text: 'Compare local options for ignition clicking, delayed lighting, failed ignition, or related range performance concerns.',
                     compare: [

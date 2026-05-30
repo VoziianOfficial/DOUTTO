@@ -14,7 +14,7 @@
 .about-hero__bg {
     background:
         linear-gradient(90deg, rgba(23, 23, 23, 0.92), rgba(23, 23, 23, 0.58)),
-        url("../assets/images/about-appliance-platform.jpg") center / cover;
+        url("../assets/images/about-appliance-platform-card.jpg") center / cover;
     transform: scale(1.02);
 }
 
