@@ -984,3 +984,66 @@
 .contact-after__steps article:hover h3 {
     color: var(--color-copper-deep);
 }
+
+@media (max-width: 1280px) {
+    .contact-after__steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .contact-after__steps::before {
+        display: none !important;
+    }
+
+    .contact-after__steps article {
+        min-height: 155px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-after {
+        padding-top: 34px !important;
+        padding-bottom: 34px !important;
+    }
+
+    .contact-after__steps {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .contact-after__steps article {
+        min-height: auto !important;
+        padding: 20px 72px 20px 20px !important;
+        border-radius: 20px !important;
+    }
+
+    .contact-after__steps article>svg {
+        top: 20px;
+        right: 20px;
+        width: 38px !important;
+        height: 38px !important;
+        border-radius: 13px;
+    }
+
+    .contact-after__steps article p {
+        font-size: 0.84rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-after {
+        padding-top: 29px !important;
+        padding-bottom: 29px !important;
+    }
+
+    .contact-after__steps article {
+        padding: 18px 66px 18px 18px !important;
+    }
+
+    .contact-after__steps article>svg {
+        top: 18px;
+        right: 18px;
+        width: 36px !important;
+        height: 36px !important;
+        padding: 9px;
+    }
+}
