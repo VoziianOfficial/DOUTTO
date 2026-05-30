@@ -50,7 +50,7 @@
     --transition-slow: 420ms ease;
 }
 
-/* RESET */
+ 
 
 *,
 *::before,
@@ -140,7 +140,7 @@ h6 {
     color: var(--color-white);
 }
 
-/* ACCESSIBILITY */
+ 
 
 .skip-link {
     position: fixed;
@@ -171,7 +171,7 @@ h6 {
 
 
 
-/* LAYOUT */
+ 
 
 .container {
     width: min(var(--container), calc(100% - 40px));
@@ -266,7 +266,7 @@ h6 {
     color: var(--color-copper-light);
 }
 
-/* TYPOGRAPHY */
+ 
 
 h1,
 h2,
@@ -319,7 +319,7 @@ p {
     transform: translateX(4px);
 }
 
-/* BUTTONS */
+ 
 
 .btn {
     position: relative;
@@ -409,7 +409,7 @@ p {
     background: var(--color-copper-soft);
 }
 
-/* HEADER */
+ 
 
 .site-header {
     position: sticky;
@@ -590,7 +590,7 @@ p {
     display: none;
 }
 
-/* SERVICES DROPDOWN */
+ 
 
 .services-dropdown {
     position: absolute;
@@ -702,7 +702,7 @@ p {
     padding: 16px 20px;
 }
 
-/* MOBILE MENU */
+ 
 
 .mobile-menu {
     position: fixed;
@@ -835,7 +835,7 @@ p {
     line-height: 1.6;
 }
 
-/* SEARCH OVERLAY */
+ 
 
 .search-overlay {
     position: fixed;
@@ -1000,7 +1000,7 @@ p {
     padding: 18px 4px 4px;
 }
 
-/* SHARED SERVICE CARDS */
+ 
 
 .service-card-grid {
     display: grid;
@@ -1162,7 +1162,7 @@ p {
     transform: translateX(4px);
 }
 
-/* SHARED FAQ */
+ 
 
 .faq-list {
     display: grid;
@@ -1229,7 +1229,7 @@ p {
     color: var(--color-muted-light);
 }
 
-/* FORMS */
+ 
 
 .form-field {
     display: grid;
@@ -1363,7 +1363,7 @@ p {
     line-height: 1.55;
 }
 
-/* COOKIE BANNER */
+ 
 
 .cookie-banner {
     position: fixed;
@@ -1437,7 +1437,7 @@ p {
     padding: 11px 17px;
 }
 
-/* FOOTER */
+ 
 
 .site-footer {
     background:
@@ -1553,7 +1553,7 @@ p {
     color: var(--color-copper-light);
 }
 
-/* RIGHT SIDE SECTION NAV */
+ 
 
 .section-nav {
     position: fixed;
@@ -1617,7 +1617,7 @@ p {
     border-color: var(--color-copper);
 }
 
-/* UTILITY ANIMATIONS */
+ 
 
 .reveal-up {
     opacity: 0;
@@ -1632,7 +1632,7 @@ p {
     transform: translateY(0);
 }
 
-/* RESPONSIVE */
+ 
 
 @media (max-width: 1280px) {
 
@@ -1825,7 +1825,7 @@ p {
     }
 }
 
-/* REDUCED MOTION */
+ 
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1839,7 +1839,7 @@ p {
     }
 }
 
-/* FIX: always sticky/fixed header */
+ 
 [data-site-header] {
     position: relative;
     z-index: 9999;
@@ -1865,7 +1865,7 @@ p {
     overflow: visible;
 }
 
-/* Bigger logo icon */
+ 
 .site-logo__icon {
     width: 58px !important;
     height: 58px !important;
@@ -1878,7 +1878,7 @@ p {
     object-fit: contain;
 }
 
-/* чтобы текст красиво отодвинулся от большого лого */
+ 
 .site-logo {
     gap: 4px;
 }
@@ -1903,7 +1903,7 @@ p {
     }
 }
 
-/* TABLET + MOBILE: center all h1 / h2 evenly */
+ 
 @media (max-width: 1024px) {
 
     h1,

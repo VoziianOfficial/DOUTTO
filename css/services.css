@@ -129,7 +129,7 @@
     background: var(--color-copper-light);
 }
 
-/* INTRO */
+ 
 
 .services-intro {
     overflow: hidden;
@@ -208,7 +208,7 @@
     line-height: 1.5;
 }
 
-/* SERVICE GRID */
+ 
 
 .services-grid-section {
     background:
@@ -220,7 +220,7 @@
     min-height: 430px;
 }
 
-/* FACTORS */
+ 
 
 .services-factors {
     overflow: hidden;
@@ -289,7 +289,7 @@
     color: var(--color-muted-light);
 }
 
-/* LENS */
+ 
 
 .services-lens {
     overflow: hidden;
@@ -392,7 +392,7 @@
     line-height: 1.55;
 }
 
-/* PROCESS */
+ 
 
 .services-process {
     background:
@@ -438,7 +438,7 @@
     color: var(--color-muted);
 }
 
-/* NOTICE */
+ 
 
 .services-notice {
     overflow: hidden;
@@ -487,7 +487,7 @@
     line-height: 1.75;
 }
 
-/* CTA */
+ 
 
 .services-cta {
     position: relative;
@@ -546,7 +546,7 @@
     margin-top: 30px;
 }
 
-/* RESPONSIVE */
+ 
 
 @media (max-width: 1280px) {
     .services-hero__container {
@@ -673,7 +673,7 @@
     }
 }
 
-/* SERVICES PAGE: square image service cards */
+ 
 .services-grid-section .service-card-grid--services {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
@@ -756,7 +756,7 @@
     display: none;
 }
 
-/* HOVERS */
+ 
 .services-grid-section .service-card-grid--services .service-card:hover {
     transform: translateY(-5px);
     border-color: rgba(214, 154, 91, 0.78);
@@ -783,7 +783,7 @@
     transform: translateX(5px);
 }
 
-/* SERVICES GRID: reduce top padding by half */
+ 
 .services-grid-section {
     padding-top: 46px !important;
 }
@@ -799,7 +799,7 @@
     }
 }
 
-/* SERVICES FACTORS: compact cards with icon on the right */
+ 
 .services-factors__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -915,7 +915,7 @@
     color: var(--color-copper-light);
 }
 
-/* SERVICES INTRO + LENS CHECKS: premium hover cards */
+ 
 .services-intro__item,
 .services-lens__checks div {
     position: relative;
@@ -988,7 +988,7 @@
         transform var(--transition);
 }
 
-/* hover */
+ 
 .services-intro__item:hover,
 .services-lens__checks div:hover {
     transform: translateY(-4px);
@@ -1027,13 +1027,13 @@
     transform: translateX(2px);
 }
 
-/* SERVICES PROCESS: reduce vertical padding by half */
+ 
 .services-process {
     padding-top: 46px !important;
     padding-bottom: 46px !important;
 }
 
-/* SERVICES PROCESS: animated line between steps */
+ 
 .services-process__steps {
     position: relative;
 }

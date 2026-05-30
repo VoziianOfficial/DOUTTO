@@ -118,7 +118,7 @@
     line-height: 1.65;
 }
 
-/* CONTACT OPTIONS */
+ 
 
 .contact-options {
     overflow: hidden;
@@ -206,7 +206,7 @@
     font-weight: 700;
 }
 
-/* FORM SECTION */
+ 
 
 .contact-form-section {
     background:
@@ -348,7 +348,7 @@
     line-height: 1.55;
 }
 
-/* AFTER REQUEST */
+ 
 
 .contact-after {
     overflow: hidden;
@@ -421,7 +421,7 @@
     line-height: 1.65;
 }
 
-/* REMINDER */
+ 
 
 .contact-reminder {
     overflow: hidden;
@@ -494,7 +494,7 @@
     line-height: 1.55;
 }
 
-/* FAQ */
+ 
 
 .contact-faq {
     overflow: hidden;
@@ -518,7 +518,7 @@
     line-height: 1.75;
 }
 
-/* CTA */
+ 
 
 .contact-cta {
     position: relative;
@@ -578,7 +578,7 @@
     margin-top: 30px;
 }
 
-/* RESPONSIVE */
+ 
 
 @media (max-width: 1280px) {
     .contact-hero__container {
@@ -686,7 +686,7 @@
     }
 }
 
-/* CONTACT OPTIONS: compact cards with right-side icons */
+ 
 .contact-options__grid {
     gap: 14px;
 }
@@ -761,7 +761,7 @@
     font-size: 0.86rem;
 }
 
-/* hover */
+ 
 .contact-options__card:hover {
     transform: translateY(-5px);
     border-color: rgba(184, 115, 51, 0.36);
@@ -788,7 +788,7 @@
     color: var(--color-copper-deep);
 }
 
-/* CONTACT FORM: compact height without breaking layout */
+ 
 .contact-form {
     padding: 22px !important;
     border-radius: 24px !important;
@@ -840,7 +840,7 @@
     rows: 3;
 }
 
-/* убираем пустое место под ошибками, но ошибки при валидации останутся */
+ 
 .contact-form .form-field__error {
     min-height: 0 !important;
     margin: 0 !important;
@@ -878,7 +878,7 @@
     padding: 14px !important;
 }
 
-/* CONTACT AFTER: reduce section padding + compact cards */
+ 
 .contact-after {
     padding-top: 46px !important;
     padding-bottom: 46px !important;
@@ -901,7 +901,7 @@
         background-color var(--transition);
 }
 
-/* нижняя акцентная линия */
+ 
 .contact-after__steps article::after {
     content: "";
     position: absolute;
@@ -962,7 +962,7 @@
     line-height: 1.55 !important;
 }
 
-/* hover */
+ 
 .contact-after__steps article:hover {
     transform: translateY(-5px);
     border-color: rgba(184, 115, 51, 0.36);

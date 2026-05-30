@@ -261,7 +261,7 @@
     background: var(--color-copper-light);
 }
 
-/* SERVICES */
+ 
 
 .home-services {
     background:
@@ -269,7 +269,7 @@
         var(--color-soft-white);
 }
 
-/* PROCESS */
+ 
 
 .home-process {
     overflow: hidden;
@@ -377,7 +377,7 @@
     line-height: 1.65;
 }
 
-/* COMPARE */
+ 
 
 .home-compare {
     overflow: hidden;
@@ -477,7 +477,7 @@
     line-height: 1.65;
 }
 
-/* ISSUES */
+ 
 
 .home-issues {
     background:
@@ -552,7 +552,7 @@
     font-weight: 800;
 }
 
-/* FAQ */
+ 
 
 .home-faq__grid {
     display: grid;
@@ -572,7 +572,7 @@
     line-height: 1.75;
 }
 
-/* CTA */
+ 
 
 .home-cta {
     position: relative;
@@ -633,7 +633,7 @@
     margin-top: 30px;
 }
 
-/* RESPONSIVE */
+ 
 
 @media (max-width: 1280px) {
     .home-hero__container {
@@ -776,7 +776,7 @@
     }
 }
 
-/* HOME SERVICES: square image cards */
+ 
 .home-services .service-card-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
@@ -878,7 +878,7 @@
     }
 }
 
-/* HOME COMPARE: compact cards with right-side icons */
+ 
 .home-compare__factors {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -994,12 +994,12 @@
     color: var(--color-copper-deep);
 }
 
-/* HOME COMPARE: remove bottom spacing */
+ 
 .home-compare {
     padding-bottom: 0 !important;
 }
 
-/* HOME ISSUES: bigger icons + icon hover effects */
+ 
 .home-issues .issue-pill {
     min-height: 145px;
     border-radius: 24px;
@@ -1073,7 +1073,7 @@
     }
 }
 
-/* APPLIANCE MARQUEE AFTER HERO */
+ 
 .appliance-marquee {
     position: relative;
     z-index: 3;
@@ -1254,7 +1254,7 @@
     }
 }
 
-/* FIX: marquee cards should not jump outside on hover */
+ 
 .appliance-marquee {
     padding: 42px 0;
 }
@@ -1281,19 +1281,19 @@
     transform: translateY(-2px) scale(1.08);
 }
 
-/* FIX: move the actual Lucide SVG icons lower in marquee cards */
+ 
 .appliance-marquee__item>svg.lucide {
     position: relative !important;
     top: 18px !important;
     transform: none !important;
 }
 
-/* текст чуть ближе к иконке */
+ 
 .appliance-marquee__item>span {
     margin-top: 8px !important;
 }
 
-/* hover именно для самой SVG */
+ 
 .appliance-marquee__item:hover>svg.lucide {
     top: 7px !important;
     transform: scale(1.08) !important;
@@ -1301,7 +1301,7 @@
     stroke-width: 1.9 !important;
 }
 
-/* HOME PROCESS: animated connection line */
+ 
 .home-process__steps {
     position: relative;
 }
@@ -1406,7 +1406,7 @@
     }
 }
 
-/* MOBILE FIX: home compare section */
+ 
 @media (max-width: 640px) {
     section.home-compare {
         padding: 46px 0 54px !important;
@@ -1533,7 +1533,7 @@
     }
 }
 
-/* RESPONSIVE REDESIGN: HOME ISSUES GRID */
+ 
 @media (max-width: 1024px) {
     .home-issues {
         padding-top: 64px !important;

@@ -49,7 +49,7 @@
     line-height: 1.72;
 }
 
-/* LEGAL LAYOUT */
+ 
 
 .legal-content-section {
     overflow: hidden;
@@ -159,7 +159,7 @@
     line-height: 1.75;
 }
 
-/* LEGAL BLOCKS */
+ 
 
 .legal-block {
     padding: 30px 34px;
@@ -238,7 +238,7 @@
     font-weight: 700;
 }
 
-/* LEGAL TABLE */
+ 
 
 .legal-table-wrap {
     width: 100%;
@@ -282,7 +282,7 @@
     border-bottom: 0;
 }
 
-/* LEGAL NOTE */
+ 
 
 .legal-note {
     display: grid;
@@ -327,7 +327,7 @@
     line-height: 1.6;
 }
 
-/* LEGAL CONTACT CARD */
+ 
 
 .legal-contact-card {
     display: grid;
@@ -367,7 +367,7 @@
     font-weight: 800;
 }
 
-/* LEGAL CTA */
+ 
 
 .legal-cta {
     position: relative;
@@ -420,7 +420,7 @@
     margin-top: 30px;
 }
 
-/* RESPONSIVE */
+ 
 
 @media (max-width: 1024px) {
     .legal-layout {
