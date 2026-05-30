@@ -48,7 +48,7 @@ window.SITE_CONFIG = {
             title: 'Refrigerator Repair',
             shortTitle: 'Refrigerator',
             href: 'refrigerator-repair.html',
-            image: './assets/images/refrigerator-repair.jpg',
+            image: '../assets/images/refrigerator-repair.jpg',
             icon: 'refrigerator',
             summary: 'Compare local providers for cooling issues, leaks, strange noises, and refrigerator performance problems.',
             dropdownText: 'Cooling issues, leaks, ice maker concerns and more.',
@@ -63,7 +63,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'cooling',
                     label: 'Cooling Issues',
-                    image: './assets/images/refrigerator-repair.jpg',
+                    image: '../assets/images/refrigerator-repair.jpg',
                     title: 'Cooling performance concerns',
                     text: 'Compare providers for refrigerators that are warm, inconsistent, cycling too often, or not holding temperature.',
                     compare: [
@@ -76,7 +76,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'leaks',
                     label: 'Leaks',
-                    image: './assets/images/refrigerator-repair.jpg',
+                    image: '../assets/images/refrigerator-repair.jpg',
                     title: 'Leaks and water issues',
                     text: 'Review provider options for water pooling, dispenser leaks, drain concerns, or suspected line issues.',
                     compare: [
@@ -89,7 +89,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'noise',
                     label: 'Noise',
-                    image: './assets/images/refrigerator-repair.jpg',
+                    image: '../assets/images/refrigerator-repair.jpg',
                     title: 'Unusual refrigerator noise',
                     text: 'Compare local companies for buzzing, rattling, clicking, or motor-related sound concerns.',
                     compare: [
@@ -102,7 +102,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'ice-maker',
                     label: 'Ice Maker',
-                    image: './assets/images/refrigerator-repair.jpg',
+                    image: '../assets/images/refrigerator-repair.jpg',
                     title: 'Ice maker and dispenser issues',
                     text: 'Explore providers for ice makers that stop producing, leak, jam, or dispense inconsistently.',
                     compare: [
@@ -220,7 +220,7 @@ window.SITE_CONFIG = {
             title: 'Dishwasher Repair',
             shortTitle: 'Dishwasher',
             href: 'dishwasher-repair.html',
-            image: './assets/images/dishwasher-repair.jpg',
+            image: '../assets/images/dishwasher-repair.jpg',
             icon: 'panels-top-left',
             summary: 'Find local provider options for leaks, drainage issues, cleaning problems, and dishwasher error codes.',
             dropdownText: 'Leaks, drainage, cleaning problems and error codes.',
@@ -235,7 +235,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'not-draining',
                     label: 'Not Draining',
-                    image: './assets/images/dishwasher-repair.jpg',
+                    image: '../assets/images/dishwasher-repair.jpg',
                     title: 'Dishwasher not draining',
                     text: 'Compare providers for standing water, drainage errors, clogged lines, or incomplete drain cycles.',
                     compare: [
@@ -248,7 +248,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'leaking',
                     label: 'Leaking',
-                    image: './assets/images/dishwasher-repair.jpg',
+                    image: '../assets/images/dishwasher-repair.jpg',
                     title: 'Dishwasher leaks',
                     text: 'Review local options for leaks around the door, beneath the unit, or near water connections.',
                     compare: [
@@ -261,7 +261,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'not-cleaning',
                     label: 'Not Cleaning',
-                    image: './assets/images/dishwasher-repair.jpg',
+                    image: '../assets/images/dishwasher-repair.jpg',
                     title: 'Poor cleaning performance',
                     text: 'Explore providers for dishwashers leaving residue, spotting, incomplete cycles, or spray arm concerns.',
                     compare: [
@@ -274,7 +274,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'error-codes',
                     label: 'Error Codes',
-                    image: './assets/images/dishwasher-repair.jpg',
+                    image: '../assets/images/dishwasher-repair.jpg',
                     title: 'Dishwasher error codes',
                     text: 'Compare providers for displayed error codes, cycle interruptions, and electronic control concerns.',
                     compare: [
