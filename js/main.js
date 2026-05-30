@@ -506,27 +506,207 @@
     }
 
     function injectConfigValues() {
+        const company = config.company || {};
+        const contact = config.contact || {};
         const currentYear = String(new Date().getFullYear());
 
-        setText('[data-company-name]', config.company.name);
-        setText('[data-company-id]', config.company.companyId);
-        setText('[data-company-address]', config.company.address);
-        setText('[data-phone-text]', config.contact.phoneDisplay);
-        setText('[data-email-text]', config.contact.email);
-        setText('[data-service-area]', config.company.serviceArea);
+        /*
+            Эти значения — старые дефолтные данные сайта.
+            Они нужны, чтобы JS мог найти DOUTTO / старый номер / старую почту
+            даже в обычном тексте без data-атрибутов.
+        */
+        const defaultTokens = {
+            companyName: 'DOUTTO',
+            companyId: 'DOUTTO-APR-4928',
+            address: '4187 Copper Ridge Avenue, Austin, TX 78731, USA',
+            phoneRaw: '+18885550148',
+            phoneDisplay: '(888) 555-0148',
+            phoneDisplayPlain: '888-555-0148',
+            email: 'support@doutto.com'
+        };
+
+        /*
+            1) Стандартная подстановка по data-атрибутам.
+            Это самый чистый способ.
+        */
+        setText('[data-company-name]', company.name);
+        setText('[data-company-id]', company.companyId);
+        setText('[data-company-address]', company.address);
+        setText('[data-address-text]', company.address);
+        setText('[data-service-area]', company.serviceArea);
         setText('[data-footer-text]', config.footerText);
         setText('[data-disclaimer]', config.disclaimer);
         setText('[data-current-year]', currentYear);
 
-        document.querySelectorAll('[data-phone-link]').forEach((link) => {
-            link.setAttribute('href', `tel:${config.contact.phoneRaw}`);
+        setText('[data-phone-text]', contact.phoneDisplay);
+        setText('[data-email-text]', contact.email);
+        setText('[data-support-hours]', contact.supportHours);
+
+        /*
+            Если в header кнопка должна быть "Call Now", а не номер,
+            этот код вернет ей текст из phoneButtonText.
+        */
+        document.querySelectorAll('.header-phone [data-phone-text]').forEach((element) => {
+            element.textContent = contact.phoneButtonText || contact.phoneDisplay;
         });
 
-        document.querySelectorAll('[data-email-link]').forEach((link) => {
-            link.setAttribute('href', `mailto:${config.contact.email}`);
+        /*
+            2) Обновляем ссылки tel: и mailto:
+        */
+        document.querySelectorAll('[data-phone-link], a[href^="tel:"]').forEach((link) => {
+            link.setAttribute('href', `tel:${contact.phoneRaw}`);
+        });
+
+        document.querySelectorAll('[data-email-link], a[href^="mailto:"]').forEach((link) => {
+            link.setAttribute('href', `mailto:${contact.email}`);
+        });
+
+        /*
+            3) Глобальная замена в обычных текстах,
+            где нет data-company-name / data-phone-text / data-email-text.
+        */
+        const replacements = createGlobalReplacements(defaultTokens, company, contact);
+
+        replaceTextInDom(document.body, replacements);
+        replaceCommonAttributes(replacements);
+        replaceDocumentMeta(replacements);
+    }
+
+    function createGlobalReplacements(defaultTokens, company, contact) {
+        const pairs = [
+            [defaultTokens.companyName, company.name],
+            [defaultTokens.companyId, company.companyId],
+            [defaultTokens.address, company.address],
+            [defaultTokens.phoneRaw, contact.phoneRaw],
+            [defaultTokens.phoneDisplay, contact.phoneDisplay],
+            [defaultTokens.phoneDisplayPlain, contact.phoneDisplay],
+            [defaultTokens.email, contact.email]
+        ];
+
+        return pairs
+            .filter(([from, to]) => {
+                return from && to && String(from) !== String(to);
+            })
+            .sort((a, b) => {
+                return String(b[0]).length - String(a[0]).length;
+            });
+    }
+
+    function replaceTextInDom(root, replacements) {
+        if (!root || !replacements.length) {
+            return;
+        }
+
+        const ignoredTags = new Set([
+            'SCRIPT',
+            'STYLE',
+            'NOSCRIPT',
+            'SVG',
+            'PATH',
+            'CLIPPATH'
+        ]);
+
+        const walker = document.createTreeWalker(
+            root,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode(node) {
+                    const parent = node.parentElement;
+
+                    if (!parent || ignoredTags.has(parent.tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    if (!node.nodeValue || !node.nodeValue.trim()) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach((node) => {
+            const nextValue = replaceTokens(node.nodeValue, replacements);
+
+            if (nextValue !== node.nodeValue) {
+                node.nodeValue = nextValue;
+            }
         });
     }
 
+    function replaceCommonAttributes(replacements) {
+        if (!replacements.length) {
+            return;
+        }
+
+        const attributes = [
+            'title',
+            'alt',
+            'aria-label',
+            'placeholder',
+            'content'
+        ];
+
+        document.querySelectorAll('*').forEach((element) => {
+            if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'SVG', 'PATH'].includes(element.tagName)) {
+                return;
+            }
+
+            attributes.forEach((attribute) => {
+                if (!element.hasAttribute(attribute)) {
+                    return;
+                }
+
+                const currentValue = element.getAttribute(attribute);
+                const nextValue = replaceTokens(currentValue, replacements);
+
+                if (nextValue !== currentValue) {
+                    element.setAttribute(attribute, nextValue);
+                }
+            });
+        });
+    }
+
+    function replaceDocumentMeta(replacements) {
+        if (!replacements.length) {
+            return;
+        }
+
+        document.title = replaceTokens(document.title, replacements);
+
+        document.querySelectorAll('meta[name="description"]').forEach((meta) => {
+            const currentValue = meta.getAttribute('content') || '';
+            const nextValue = replaceTokens(currentValue, replacements);
+
+            if (nextValue !== currentValue) {
+                meta.setAttribute('content', nextValue);
+            }
+        });
+    }
+
+    function replaceTokens(value, replacements) {
+        let result = String(value || '');
+
+        replacements.forEach(([from, to]) => {
+            result = result.replace(
+                new RegExp(escapeRegExp(from), 'g'),
+                String(to)
+            );
+        });
+
+        return result;
+    }
+
+    function escapeRegExp(value) {
+        return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
     function setText(selector, value) {
         document.querySelectorAll(selector).forEach((element) => {
             element.textContent = value;
