@@ -134,7 +134,7 @@ window.SITE_CONFIG = {
             title: 'Washer & Dryer',
             shortTitle: 'Washer & Dryer',
             href: 'washer-dryer-repair.html',
-            image: './assets/images/washer-dryer-repair.jpg',
+            image: '../assets/images/washer-dryer-repair.jpg',
             icon: 'washing-machine',
             summary: 'Review provider options for laundry appliance problems, drainage issues, heating concerns, and cycle failures.',
             dropdownText: 'Drainage problems, heating concerns, noise and more.',
@@ -149,7 +149,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'washer-drainage',
                     label: 'Washer Drainage',
-                    image: './assets/images/washer-dryer-repair.jpg',
+                    image: '../assets/images/washer-dryer-repair.jpg',
                     title: 'Washer drainage problems',
                     text: 'Compare providers for washers that do not drain, stop mid-cycle, show drainage errors, or leave water inside.',
                     compare: [
@@ -162,7 +162,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'dryer-heating',
                     label: 'Dryer Heating',
-                    image: './assets/images/washer-dryer-repair.jpg',
+                    image: '../assets/images/washer-dryer-repair.jpg',
                     title: 'Dryer heating concerns',
                     text: 'Review local provider options for dryers that do not heat, take too long to dry, or show heating-related symptoms.',
                     compare: [
@@ -175,7 +175,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'spin-cycle',
                     label: 'Spin Cycle',
-                    image: './assets/images/washer-dryer-repair.jpg',
+                    image: '../assets/images/washer-dryer-repair.jpg',
                     title: 'Spin cycle and movement issues',
                     text: 'Explore providers for washer spin issues, incomplete cycles, balance problems, or drum movement concerns.',
                     compare: [
@@ -188,7 +188,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'vibration-noise',
                     label: 'Vibration / Noise',
-                    image: './assets/images/washer-dryer-repair.jpg',
+                    image: '../assets/images/washer-dryer-repair.jpg',
                     title: 'Vibration and unusual noise',
                     text: 'Compare local provider options for loud operation, shaking, banging, squeaking, or vibration concerns.',
                     compare: [
