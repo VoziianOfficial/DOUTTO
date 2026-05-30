@@ -1055,3 +1055,248 @@
     color: var(--color-copper-deep);
     transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+    .home-issues .issue-pill {
+        min-height: 128px;
+    }
+
+    .home-issues .issue-pill__icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 19px;
+    }
+
+    .home-issues .issue-pill__icon svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* APPLIANCE MARQUEE AFTER HERO */
+.appliance-marquee {
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 14% 20%, rgba(184, 115, 51, 0.1), transparent 28%),
+        linear-gradient(180deg, #fbf7f1 0%, var(--color-soft-white) 100%);
+    border-top: 1px solid rgba(43, 43, 43, 0.08);
+    border-bottom: 1px solid rgba(43, 43, 43, 0.08);
+    padding: 34px 0;
+}
+
+.appliance-marquee__viewport {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    overflow: hidden;
+}
+
+.appliance-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: applianceMarqueeMove 34s linear infinite;
+    will-change: transform;
+}
+
+.appliance-marquee:hover .appliance-marquee__track {
+    animation-play-state: paused;
+}
+
+.appliance-marquee__line {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-right: 18px;
+}
+
+.appliance-marquee__item {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-width: 178px;
+    min-height: 132px;
+    overflow: hidden;
+    border: 1px solid rgba(43, 43, 43, 0.1);
+    border-radius: 24px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.7)),
+        rgba(255, 255, 255, 0.82);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.055);
+    color: var(--color-text);
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background-color var(--transition);
+}
+
+.appliance-marquee__item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(184, 115, 51, 0.16), transparent 34%),
+        linear-gradient(180deg, transparent, rgba(184, 115, 51, 0.06));
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.appliance-marquee__item::after {
+    content: "";
+    position: absolute;
+    right: 22px;
+    bottom: 0;
+    left: 22px;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    background: var(--color-copper);
+    transition: transform var(--transition);
+}
+
+.appliance-marquee__item svg {
+    position: relative;
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    color: var(--color-text);
+    stroke-width: 1.55;
+    transition:
+        transform var(--transition),
+        color var(--transition),
+        stroke-width var(--transition);
+}
+
+.appliance-marquee__item span {
+    position: relative;
+    z-index: 1;
+    margin-top: 14px;
+    font-size: 0.94rem;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center;
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+.appliance-marquee__item:hover {
+    transform: translateY(-7px) scale(1.025);
+    border-color: rgba(184, 115, 51, 0.38);
+    box-shadow: 0 24px 58px rgba(0, 0, 0, 0.12);
+}
+
+.appliance-marquee__item:hover::before {
+    opacity: 1;
+}
+
+.appliance-marquee__item:hover::after {
+    transform: scaleX(1);
+}
+
+.appliance-marquee__item:hover svg {
+    color: var(--color-copper);
+    transform: translateY(-3px) scale(1.12);
+    stroke-width: 1.9;
+}
+
+.appliance-marquee__item:hover span {
+    color: var(--color-copper-deep);
+    transform: translateY(-2px);
+}
+
+@keyframes applianceMarqueeMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .appliance-marquee {
+        padding: 26px 0;
+    }
+
+    .appliance-marquee__line {
+        gap: 14px;
+        padding-right: 14px;
+    }
+
+    .appliance-marquee__item {
+        min-width: 145px;
+        min-height: 112px;
+        border-radius: 20px;
+    }
+
+    .appliance-marquee__item svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .appliance-marquee__item span {
+        margin-top: 11px;
+        font-size: 0.84rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .appliance-marquee__track {
+        animation-duration: 26s;
+    }
+
+    .appliance-marquee__item {
+        min-width: 128px;
+        min-height: 104px;
+    }
+}
+
+/* FIX: marquee cards should not jump outside on hover */
+.appliance-marquee {
+    padding: 42px 0;
+}
+
+.appliance-marquee__viewport {
+    padding: 10px 0;
+}
+
+.appliance-marquee__track {
+    align-items: center;
+}
+
+.appliance-marquee__item {
+    transform-origin: center;
+}
+
+.appliance-marquee__item:hover {
+    transform: translateY(-3px) scale(1.01);
+    border-color: rgba(184, 115, 51, 0.38);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.11);
+}
+
+.appliance-marquee__item:hover svg {
+    transform: translateY(-2px) scale(1.08);
+}
+
+/* FIX: move the actual Lucide SVG icons lower in marquee cards */
+.appliance-marquee__item>svg.lucide {
+    position: relative !important;
+    top: 18px !important;
+    transform: none !important;
+}
+
+/* текст чуть ближе к иконке */
+.appliance-marquee__item>span {
+    margin-top: 8px !important;
+}
+
+/* hover именно для самой SVG */
+.appliance-marquee__item:hover>svg.lucide {
+    top: 7px !important;
+    transform: scale(1.08) !important;
+    color: var(--color-copper) !important;
+    stroke-width: 1.9 !important;
+}
