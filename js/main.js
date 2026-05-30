@@ -903,49 +903,98 @@
 
     function initSectionNavigation() {
         const mount = document.querySelector(SELECTORS.sectionNavMount);
+
+        if (!mount) {
+            return;
+        }
+
         const sections = Array.from(document.querySelectorAll('[data-section][id]'))
             .filter((section) => section.offsetParent !== null);
 
-        if (!mount || sections.length < 3) {
+        if (sections.length < 3) {
+            mount.innerHTML = '';
             return;
         }
 
         mount.innerHTML = `
-            <nav class="section-nav" aria-label="Page section navigation">
-                ${sections.map((section) => {
+        <nav class="section-nav" aria-label="Page section navigation">
+            ${sections.map((section) => {
             const label = section.dataset.section || section.id;
 
             return `
-                        <a class="section-nav__link" href="#${escapeHtml(section.id)}" data-section-nav-link>
-                            <span class="section-nav__label">${escapeHtml(label)}</span>
-                            <span class="section-nav__dot" aria-hidden="true"></span>
-                        </a>
-                    `;
+                    <a class="section-nav__link" href="#${escapeHtml(section.id)}" data-section-nav-link>
+                        <span class="section-nav__label">${escapeHtml(label)}</span>
+                        <span class="section-nav__dot" aria-hidden="true"></span>
+                    </a>
+                `;
         }).join('')}
-            </nav>
-        `;
+        </nav>
+    `;
 
         const links = Array.from(mount.querySelectorAll('[data-section-nav-link]'));
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) {
-                    return;
-                }
-
-                const id = entry.target.id;
-
-                links.forEach((link) => {
-                    link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
-                });
+        const setActiveLink = (id) => {
+            links.forEach((link) => {
+                link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
             });
-        }, {
-            root: null,
-            threshold: 0.28,
-            rootMargin: '-20% 0px -55% 0px'
+        };
+
+        const updateActiveSection = () => {
+            const header = document.querySelector('[data-header]');
+            const headerHeight = header ? header.offsetHeight : 0;
+
+            const scrollTop = window.scrollY;
+            const checkPoint = scrollTop + headerHeight + window.innerHeight * 0.38;
+
+            let activeSection = sections[0];
+
+            sections.forEach((section) => {
+                if (section.offsetTop <= checkPoint) {
+                    activeSection = section;
+                }
+            });
+
+            const isNearTop = scrollTop <= 40;
+            const isNearBottom =
+                window.innerHeight + scrollTop >= document.documentElement.scrollHeight - 80;
+
+            if (isNearTop) {
+                activeSection = sections[0];
+            }
+
+            if (isNearBottom) {
+                activeSection = sections[sections.length - 1];
+            }
+
+            setActiveLink(activeSection.id);
+        };
+
+        let ticking = false;
+
+        const onScroll = () => {
+            if (ticking) {
+                return;
+            }
+
+            window.requestAnimationFrame(() => {
+                updateActiveSection();
+                ticking = false;
+            });
+
+            ticking = true;
+        };
+
+        links.forEach((link) => {
+            link.addEventListener('click', () => {
+                const id = link.getAttribute('href').replace('#', '');
+                setActiveLink(id);
+            });
         });
 
-        sections.forEach((section) => observer.observe(section));
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', updateActiveSection);
+
+        updateActiveSection();
     }
 
     function initSmoothScrolling() {
