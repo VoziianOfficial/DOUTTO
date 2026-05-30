@@ -788,3 +788,199 @@
     color: var(--color-copper-deep);
 }
 
+/* CONTACT FORM: compact height without breaking layout */
+.contact-form {
+    padding: 22px !important;
+    border-radius: 24px !important;
+}
+
+.contact-form__head {
+    margin-bottom: 16px !important;
+}
+
+.contact-form__head h3 {
+    margin-top: 6px !important;
+    font-size: 1.68rem !important;
+    line-height: 1.05 !important;
+}
+
+.contact-form__head p:not(.contact-form__eyebrow) {
+    margin-top: 7px !important;
+    font-size: 0.86rem !important;
+    line-height: 1.5 !important;
+}
+
+.contact-form__grid {
+    gap: 10px !important;
+}
+
+.contact-form .form-field {
+    gap: 6px !important;
+}
+
+.contact-form .form-field label {
+    font-size: 0.8rem !important;
+}
+
+.contact-form .form-field input,
+.contact-form .form-field select,
+.contact-form .form-field textarea {
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+    font-size: 0.9rem !important;
+}
+
+.contact-form .form-field input,
+.contact-form .form-field select {
+    min-height: 42px !important;
+}
+
+.contact-form .form-field textarea {
+    min-height: 82px !important;
+    rows: 3;
+}
+
+/* убираем пустое место под ошибками, но ошибки при валидации останутся */
+.contact-form .form-field__error {
+    min-height: 0 !important;
+    margin: 0 !important;
+    font-size: 0.74rem !important;
+    line-height: 1.25 !important;
+}
+
+.contact-form .form-field__error:empty {
+    display: none !important;
+}
+
+.contact-form .form-field__error:not(:empty) {
+    display: block !important;
+    margin-top: 2px !important;
+}
+
+.contact-form .form-checkbox {
+    margin-top: 12px !important;
+    gap: 9px !important;
+}
+
+.contact-form .form-checkbox__text {
+    font-size: 0.78rem !important;
+    line-height: 1.42 !important;
+}
+
+.contact-form__submit {
+    margin-top: 14px !important;
+    min-height: 44px !important;
+    padding: 12px 18px !important;
+}
+
+.contact-form__success {
+    margin-top: 14px !important;
+    padding: 14px !important;
+}
+
+/* CONTACT AFTER: reduce section padding + compact cards */
+.contact-after {
+    padding-top: 46px !important;
+    padding-bottom: 46px !important;
+}
+
+.contact-after__steps {
+    gap: 14px !important;
+}
+
+.contact-after__steps article {
+    position: relative;
+    min-height: 175px !important;
+    overflow: hidden;
+    padding: 22px 78px 22px 22px !important;
+    border-radius: 22px !important;
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background-color var(--transition);
+}
+
+/* нижняя акцентная линия */
+.contact-after__steps article::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    width: 46px;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: var(--color-copper);
+    transition: transform var(--transition);
+}
+
+.contact-after__steps article span {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 46px;
+    height: 34px;
+    border: 1px solid rgba(184, 115, 51, 0.18);
+    border-radius: 999px;
+    background: rgba(184, 115, 51, 0.08);
+    color: var(--color-copper-deep) !important;
+    font-size: 1rem !important;
+    line-height: 1 !important;
+}
+
+.contact-after__steps article>svg {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: 0 !important;
+    padding: 10px;
+    border: 1px solid rgba(184, 115, 51, 0.22);
+    border-radius: 14px;
+    background: rgba(184, 115, 51, 0.1);
+    color: var(--color-copper);
+    transition:
+        transform var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
+}
+
+.contact-after__steps article h3 {
+    margin-top: 20px !important;
+    max-width: 230px;
+    font-size: 1rem !important;
+    line-height: 1.25 !important;
+}
+
+.contact-after__steps article p {
+    margin-top: 9px !important;
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+}
+
+/* hover */
+.contact-after__steps article:hover {
+    transform: translateY(-5px);
+    border-color: rgba(184, 115, 51, 0.36);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+}
+
+.contact-after__steps article:hover::after {
+    transform: scaleX(1);
+}
+
+.contact-after__steps article:hover>svg {
+    transform: translateY(-2px) rotate(4deg) scale(1.06);
+    background: var(--color-copper);
+    border-color: var(--color-copper);
+    color: var(--color-white);
+    box-shadow: 0 14px 30px rgba(184, 115, 51, 0.28);
+}
+
+.contact-after__steps article:hover h3 {
+    color: var(--color-copper-deep);
+}
