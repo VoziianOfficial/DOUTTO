@@ -52,16 +52,30 @@
             return;
         }
 
-        const buttons = Array.from(tabsRoot.querySelectorAll('[data-service-tab]'));
+        const buttonsWrap = tabsRoot.querySelector('.service-tabs__buttons');
         const panel = tabsRoot.querySelector('[data-service-tab-panel]');
         const image = tabsRoot.querySelector('[data-service-tab-image]');
         const title = tabsRoot.querySelector('[data-service-tab-title]');
         const text = tabsRoot.querySelector('[data-service-tab-text]');
         const list = tabsRoot.querySelector('[data-service-tab-list]');
 
-        if (!buttons.length || !panel || !image || !title || !text || !list) {
+        if (!buttonsWrap || !panel || !image || !title || !text || !list) {
             return;
         }
+
+        buttonsWrap.innerHTML = service.tabs.map((tab, index) => {
+            return `
+            <button class="service-tabs__button ${index === 0 ? 'is-active' : ''}" type="button" role="tab"
+                aria-selected="${index === 0 ? 'true' : 'false'}"
+                aria-controls="service-tab-panel"
+                data-service-tab="${escapeHtml(tab.id)}">
+                <i data-lucide="${escapeHtml(tab.icon || 'circle-dot')}" aria-hidden="true"></i>
+                <span>${escapeHtml(tab.label)}</span>
+            </button>
+        `;
+        }).join('');
+
+        const buttons = Array.from(buttonsWrap.querySelectorAll('[data-service-tab]'));
 
         const activateTab = (tabId, shouldFocus = false) => {
             const tabData = service.tabs.find((tab) => tab.id === tabId);
@@ -98,9 +112,7 @@
             }, 160);
         };
 
-        buttons.forEach((button, index) => {
-            button.setAttribute('tabindex', button.classList.contains('is-active') ? '0' : '-1');
-
+        buttons.forEach((button) => {
             button.addEventListener('click', () => {
                 activateTab(button.dataset.serviceTab);
             });
@@ -131,16 +143,14 @@
                     activateTab(buttons[buttons.length - 1].dataset.serviceTab, true);
                 }
             });
-
-            if (index === 0 && service.tabs[0]) {
-                button.dataset.serviceTab = service.tabs[0].id;
-            }
         });
 
-        const activeButton = buttons.find((button) => button.classList.contains('is-active')) || buttons[0];
-        activateTab(activeButton.dataset.serviceTab);
-    }
+        activateTab(service.tabs[0].id);
 
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+            window.lucide.createIcons();
+        }
+    }
     function injectServiceFaq(service) {
         const faqMount = document.querySelector('[data-service-faq]');
 

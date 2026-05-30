@@ -63,7 +63,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'cooling',
                     label: 'Cooling Issues',
-                    image: '../assets/images/refrigerator-repair.jpg',
+                    image: '../assets/images/dishwasher-repair.jpg',
                     title: 'Cooling performance concerns',
                     text: 'Compare providers for refrigerators that are warm, inconsistent, cycling too often, or not holding temperature.',
                     compare: [
@@ -76,7 +76,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'leaks',
                     label: 'Leaks',
-                    image: '../assets/images/refrigerator-repair.jpg',
+                    image: '../assets/images/washer-dryer-repair.jpg',
                     title: 'Leaks and water issues',
                     text: 'Review provider options for water pooling, dispenser leaks, drain concerns, or suspected line issues.',
                     compare: [
@@ -89,7 +89,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'noise',
                     label: 'Noise',
-                    image: '../assets/images/refrigerator-repair.jpg',
+                    image: '../assets/images/oven-range-repair.jpg',
                     title: 'Unusual refrigerator noise',
                     text: 'Compare local companies for buzzing, rattling, clicking, or motor-related sound concerns.',
                     compare: [
@@ -162,7 +162,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'dryer-heating',
                     label: 'Dryer Heating',
-                    image: '../assets/images/washer-dryer-repair.jpg',
+                    image: '../assets/images/dishwasher-repair.jpg',
                     title: 'Dryer heating concerns',
                     text: 'Review local provider options for dryers that do not heat, take too long to dry, or show heating-related symptoms.',
                     compare: [
@@ -175,7 +175,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'spin-cycle',
                     label: 'Spin Cycle',
-                    image: '../assets/images/washer-dryer-repair.jpg',
+                    image: '../assets/images/refrigerator-repair.jpg',
                     title: 'Spin cycle and movement issues',
                     text: 'Explore providers for washer spin issues, incomplete cycles, balance problems, or drum movement concerns.',
                     compare: [
@@ -188,7 +188,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'vibration-noise',
                     label: 'Vibration / Noise',
-                    image: '../assets/images/washer-dryer-repair.jpg',
+                    image: '../assets/images/oven-range-repair.jpg',
                     title: 'Vibration and unusual noise',
                     text: 'Compare local provider options for loud operation, shaking, banging, squeaking, or vibration concerns.',
                     compare: [
@@ -248,7 +248,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'leaking',
                     label: 'Leaking',
-                    image: '../assets/images/dishwasher-repair.jpg',
+                    image: '../assets/images/oven-range-repair.jpg',
                     title: 'Dishwasher leaks',
                     text: 'Review local options for leaks around the door, beneath the unit, or near water connections.',
                     compare: [
@@ -261,7 +261,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'not-cleaning',
                     label: 'Not Cleaning',
-                    image: '../assets/images/dishwasher-repair.jpg',
+                    image: '../assets/images/refrigerator-repair.jpg',
                     title: 'Poor cleaning performance',
                     text: 'Explore providers for dishwashers leaving residue, spotting, incomplete cycles, or spray arm concerns.',
                     compare: [
@@ -274,7 +274,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'error-codes',
                     label: 'Error Codes',
-                    image: '../assets/images/dishwasher-repair.jpg',
+                    image: '../assets/images/washer-dryer-repair.jpg',
                     title: 'Dishwasher error codes',
                     text: 'Compare providers for displayed error codes, cycle interruptions, and electronic control concerns.',
                     compare: [
@@ -334,7 +334,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'burners',
                     label: 'Burners',
-                    image: '../assets/images/oven-range-repair.jpg',
+                    image: '../assets/images/dishwasher-repair.jpg',
                     title: 'Range burner problems',
                     text: 'Explore providers for burners that will not light, heat unevenly, click repeatedly, or respond inconsistently.',
                     compare: [
@@ -347,7 +347,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'temperature-control',
                     label: 'Temperature Control',
-                    image: '../assets/images/oven-range-repair.jpg',
+                    image: '../assets/images/refrigerator-repair.jpg',
                     title: 'Temperature control issues',
                     text: 'Review provider options for temperature swings, inaccurate readings, sensor concerns, or inconsistent baking results.',
                     compare: [
@@ -360,7 +360,7 @@ window.SITE_CONFIG = {
                 {
                     id: 'ignition',
                     label: 'Ignition',
-                    image: '../assets/images/oven-range-repair.jpg',
+                    image: '../assets/images/washer-dryer-repair.jpg',
                     title: 'Ignition concerns',
                     text: 'Compare local options for ignition clicking, delayed lighting, failed ignition, or related range performance concerns.',
                     compare: [
