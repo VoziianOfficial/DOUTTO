@@ -175,7 +175,6 @@
 }
 
 .services-intro__panel h3 {
-    max-width: 320px;
     color: var(--color-text);
     font-size: 1.25rem;
 }
@@ -526,7 +525,6 @@
 }
 
 .services-cta h2 {
-    max-width: 800px;
     font-family: var(--font-heading);
     font-size: clamp(2.2rem, 5vw, 3.6rem);
     line-height: 1;
@@ -672,5 +670,471 @@
     .services-cta__inner {
         min-height: 380px;
         padding: 68px 0;
+    }
+}
+
+/* SERVICES PAGE: square image service cards */
+.services-grid-section .service-card-grid--services {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.services-grid-section .service-card-grid--services .service-card {
+    aspect-ratio: 1 / 1;
+    min-height: 0 !important;
+    height: auto;
+    border-radius: 26px;
+    overflow: hidden;
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 18px 46px rgba(0, 0, 0, 0.14);
+}
+
+.services-grid-section .service-card-grid--services .service-card::before {
+    inset: 0;
+    background-image: var(--service-image);
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.01);
+    transition:
+        transform 700ms ease,
+        filter 700ms ease;
+}
+
+.services-grid-section .service-card-grid--services .service-card::after {
+    background:
+        linear-gradient(180deg,
+            rgba(23, 23, 23, 0.08) 0%,
+            rgba(23, 23, 23, 0.42) 44%,
+            rgba(23, 23, 23, 0.92) 100%),
+        radial-gradient(circle at 18% 12%, rgba(214, 154, 91, 0.2), transparent 34%);
+}
+
+.services-grid-section .service-card-grid--services .service-card__content {
+    justify-content: flex-end;
+    padding: 22px;
+}
+
+.services-grid-section .service-card-grid--services .service-card__label {
+    margin-bottom: 9px;
+    color: var(--color-copper-light);
+    font-size: 0.68rem;
+}
+
+.services-grid-section .service-card-grid--services .service-card h3 {
+    max-width: 230px;
+    font-size: clamp(1.25rem, 1.7vw, 1.55rem);
+    line-height: 1.05;
+}
+
+.services-grid-section .service-card-grid--services .service-card p {
+    display: none;
+}
+
+.services-grid-section .service-card-grid--services .service-card__line {
+    width: 46px;
+    margin: 13px 0 0;
+}
+
+.services-grid-section .service-card-grid--services .service-card__cta {
+    margin-top: 15px;
+}
+
+.services-grid-section .service-card-grid--services .service-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+    background: rgba(23, 23, 23, 0.62);
+    border-color: rgba(214, 154, 91, 0.42);
+    transition:
+        transform var(--transition),
+        background-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
+}
+
+.services-grid-section .service-card-grid--services .service-card__scanner {
+    display: none;
+}
+
+/* HOVERS */
+.services-grid-section .service-card-grid--services .service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214, 154, 91, 0.78);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+}
+
+.services-grid-section .service-card-grid--services .service-card:hover::before {
+    transform: scale(1.06);
+    filter: saturate(1.08) contrast(1.04);
+}
+
+.services-grid-section .service-card-grid--services .service-card:hover .service-card__icon {
+    transform: translateY(-3px) rotate(4deg) scale(1.06);
+    background: var(--color-copper);
+    color: var(--color-white);
+    box-shadow: 0 14px 32px rgba(184, 115, 51, 0.32);
+}
+
+.services-grid-section .service-card-grid--services .service-card:hover .service-card__line {
+    width: 82px;
+}
+
+.services-grid-section .service-card-grid--services .service-card:hover .service-card__cta svg {
+    transform: translateX(5px);
+}
+
+/* SERVICES GRID: reduce top padding by half */
+.services-grid-section {
+    padding-top: 46px !important;
+}
+@media (max-width: 768px) {
+    .services-grid-section {
+        padding-top: 34px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid-section {
+        padding-top: 29px !important;
+    }
+}
+
+/* SERVICES FACTORS: compact cards with icon on the right */
+.services-factors__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.services-factors .comparison-factor {
+    position: relative;
+    min-height: 135px;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 20px 76px 20px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.035)),
+        rgba(23, 23, 23, 0.68);
+    box-shadow: none;
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.services-factors .comparison-factor::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(214, 154, 91, 0.18), transparent 34%),
+        linear-gradient(90deg, transparent, rgba(214, 154, 91, 0.055));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+}
+
+.services-factors .comparison-factor::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    width: 46px;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: var(--color-copper-light);
+    transition: transform var(--transition);
+}
+
+.services-factors .comparison-factor__icon {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    background: rgba(184, 115, 51, 0.12);
+    border: 1px solid rgba(214, 154, 91, 0.26);
+    color: var(--color-copper-light);
+    transition:
+        transform var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
+}
+
+.services-factors .comparison-factor__icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.services-factors .comparison-factor h3 {
+    margin-top: 0;
+    max-width: 230px;
+    color: var(--color-white);
+    font-size: 1rem;
+    line-height: 1.25;
+    transition: color var(--transition);
+}
+
+.services-factors .comparison-factor p {
+    margin-top: 9px;
+    color: var(--color-muted-light);
+    font-size: 0.86rem;
+    line-height: 1.55;
+}
+
+.services-factors .comparison-factor:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214, 154, 91, 0.42);
+    background-color: rgba(255, 255, 255, 0.075);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.22);
+}
+
+.services-factors .comparison-factor:hover::before {
+    opacity: 1;
+}
+
+.services-factors .comparison-factor:hover::after {
+    transform: scaleX(1);
+}
+
+.services-factors .comparison-factor:hover .comparison-factor__icon {
+    transform: translateY(-2px) rotate(4deg) scale(1.06);
+    background: var(--color-copper);
+    border-color: var(--color-copper);
+    color: var(--color-white);
+    box-shadow: 0 14px 30px rgba(184, 115, 51, 0.3);
+}
+
+.services-factors .comparison-factor:hover h3 {
+    color: var(--color-copper-light);
+}
+
+/* SERVICES INTRO + LENS CHECKS: premium hover cards */
+.services-intro__item,
+.services-lens__checks div {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.services-intro__item::before,
+.services-lens__checks div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(184, 115, 51, 0.16), transparent 34%),
+        linear-gradient(90deg, transparent, rgba(184, 115, 51, 0.06));
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.services-intro__item::after,
+.services-lens__checks div::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    bottom: 0;
+    width: 46px;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: var(--color-copper);
+    transition: transform var(--transition);
+}
+
+.services-intro__item i,
+.services-lens__checks div i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    background: rgba(184, 115, 51, 0.1);
+    color: var(--color-copper);
+    transition:
+        transform var(--transition),
+        background-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
+}
+
+.services-intro__item svg,
+.services-lens__checks div svg {
+    width: 19px;
+    height: 19px;
+    transition:
+        transform var(--transition),
+        stroke-width var(--transition);
+}
+
+.services-intro__item span,
+.services-lens__checks div span {
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+/* hover */
+.services-intro__item:hover,
+.services-lens__checks div:hover {
+    transform: translateY(-4px);
+    border-color: rgba(184, 115, 51, 0.36);
+    background: var(--color-white);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.11);
+}
+
+.services-intro__item:hover::before,
+.services-lens__checks div:hover::before {
+    opacity: 1;
+}
+
+.services-intro__item:hover::after,
+.services-lens__checks div:hover::after {
+    transform: scaleX(1);
+}
+
+.services-intro__item:hover i,
+.services-lens__checks div:hover i {
+    transform: translateY(-2px) rotate(4deg) scale(1.06);
+    background: var(--color-copper);
+    color: var(--color-white);
+    box-shadow: 0 12px 26px rgba(184, 115, 51, 0.28);
+}
+
+.services-intro__item:hover svg,
+.services-lens__checks div:hover svg {
+    transform: scale(1.08);
+    stroke-width: 2.2;
+}
+
+.services-intro__item:hover span,
+.services-lens__checks div:hover span {
+    color: var(--color-copper-deep);
+    transform: translateX(2px);
+}
+
+/* SERVICES PROCESS: reduce vertical padding by half */
+.services-process {
+    padding-top: 46px !important;
+    padding-bottom: 46px !important;
+}
+
+/* SERVICES PROCESS: animated line between steps */
+.services-process__steps {
+    position: relative;
+}
+
+.services-process__steps::before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    right: 9%;
+    left: 9%;
+    z-index: 0;
+    display: block;
+    height: 2px;
+    background:
+        linear-gradient(90deg,
+            transparent 0%,
+            rgba(184, 115, 51, 0.18) 12%,
+            rgba(184, 115, 51, 0.75) 50%,
+            rgba(184, 115, 51, 0.18) 88%,
+            transparent 100%);
+    background-size: 220% 100%;
+    animation: servicesProcessLineGlow 5.4s linear infinite;
+}
+
+.services-process__steps::after {
+    content: "";
+    position: absolute;
+    top: 39px;
+    left: 9%;
+    z-index: 2;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: var(--color-copper);
+    box-shadow:
+        0 0 0 8px rgba(184, 115, 51, 0.1),
+        0 0 22px rgba(184, 115, 51, 0.68),
+        0 0 44px rgba(184, 115, 51, 0.34);
+    animation: servicesProcessMovingDot 5.4s ease-in-out infinite;
+}
+
+.services-process .platform-step {
+    position: relative;
+    z-index: 3;
+}
+
+.services-process .platform-step__icon {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-process .platform-step__icon::after {
+    content: "";
+    position: absolute;
+    inset: -45%;
+    background:
+        linear-gradient(120deg,
+            transparent 35%,
+            rgba(255, 255, 255, 0.34) 50%,
+            transparent 65%);
+    transform: translateX(-120%) rotate(18deg);
+    transition: transform 650ms ease;
+}
+
+.services-process .platform-step:hover .platform-step__icon::after {
+    transform: translateX(120%) rotate(18deg);
+}
+
+@keyframes servicesProcessLineGlow {
+    from {
+        background-position: 220% 0;
+    }
+
+    to {
+        background-position: -220% 0;
+    }
+}
+
+@keyframes servicesProcessMovingDot {
+    0% {
+        left: 9%;
+        transform: translateX(-50%) scale(0.85);
+        opacity: 0.45;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.15);
+        opacity: 1;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 91%;
+        transform: translateX(-50%) scale(0.85);
+        opacity: 0.45;
     }
 }

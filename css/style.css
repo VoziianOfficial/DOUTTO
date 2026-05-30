@@ -691,7 +691,6 @@ p {
 }
 
 .services-dropdown__link span {
-    display: block;
     margin-top: 4px;
     color: var(--color-muted-light);
     font-size: 0.82rem;
