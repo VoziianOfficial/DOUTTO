@@ -1084,3 +1084,33 @@
         padding-bottom: 29px !important;
     }
 }
+
+/* ABOUT STORY STATS: tablet/mobile compact 3 cards */
+@media (max-width: 1024px) {
+    .about-story__stats {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        width: 100% !important;
+        margin-top: 24px !important;
+    }
+
+    .about-story__stats div {
+        display: flex !important;
+        min-height: 88px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 14px 10px !important;
+        border-radius: 18px !important;
+        text-align: center !important;
+    }
+
+    .about-story__stats strong {
+        font-size: clamp(1.55rem, 5vw, 2.15rem) !important;
+        line-height: 1 !important;
+    }
+
+    .about-story__stats span {
+        display: none !important;
+    }
+}
