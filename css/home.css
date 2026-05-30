@@ -547,7 +547,6 @@
 }
 
 .issue-pill span {
-    display: block;
     margin-top: 12px;
     color: var(--color-text);
     font-weight: 800;
@@ -877,4 +876,125 @@
         max-width: 260px;
         font-size: 1.42rem;
     }
+}
+
+/* HOME COMPARE: compact cards with right-side icons */
+.home-compare__factors {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.home-compare .comparison-factor {
+    position: relative;
+    min-height: 138px;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 20px 76px 20px 20px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.74)),
+        var(--color-white);
+    border: 1px solid rgba(43, 43, 43, 0.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.045);
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background-color var(--transition);
+}
+
+.home-compare .comparison-factor::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(184, 115, 51, 0.16), transparent 34%),
+        linear-gradient(90deg, transparent, rgba(184, 115, 51, 0.055));
+    opacity: 0;
+    transition: opacity var(--transition);
+    pointer-events: none;
+}
+
+.home-compare .comparison-factor::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    width: 46px;
+    height: 2px;
+    background: var(--color-copper);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition);
+}
+
+.home-compare .comparison-factor__icon {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    background: rgba(184, 115, 51, 0.11);
+    border: 1px solid rgba(184, 115, 51, 0.22);
+    color: var(--color-copper);
+    transition:
+        transform var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
+}
+
+.home-compare .comparison-factor__icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.home-compare .comparison-factor h3 {
+    margin-top: 0;
+    max-width: 230px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: var(--color-text);
+    transition: color var(--transition);
+}
+
+.home-compare .comparison-factor p {
+    margin-top: 9px;
+    color: var(--color-muted);
+    font-size: 0.86rem;
+    line-height: 1.55;
+    transition: color var(--transition);
+}
+
+.home-compare .comparison-factor:hover {
+    transform: translateY(-5px);
+    border-color: rgba(184, 115, 51, 0.38);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
+}
+
+.home-compare .comparison-factor:hover::before {
+    opacity: 1;
+}
+
+.home-compare .comparison-factor:hover::after {
+    transform: scaleX(1);
+}
+
+.home-compare .comparison-factor:hover .comparison-factor__icon {
+    transform: translateY(-2px) rotate(4deg) scale(1.06);
+    background: var(--color-copper);
+    border-color: var(--color-copper);
+    color: var(--color-white);
+    box-shadow: 0 14px 30px rgba(184, 115, 51, 0.28);
+}
+
+.home-compare .comparison-factor:hover h3 {
+    color: var(--color-copper-deep);
+}
+
+/* HOME COMPARE: remove bottom spacing */
+.home-compare {
+    padding-bottom: 0 !important;
 }
