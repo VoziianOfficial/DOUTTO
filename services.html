@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Explore appliance repair categories and compare local provider options through the DOUTTO matching platform." />
+
+    <title>Appliance Repair Services | DOUTTO</title>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body data-page="services">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div data-site-header></div>
+
+    <main id="main">
+        <!-- SERVICES HERO -->
+        <section class="services-hero" id="services-hero" data-section="Hero" aria-labelledby="services-hero-title">
+            <div class="services-hero__bg" aria-hidden="true"></div>
+            <div class="services-hero__overlay" aria-hidden="true"></div>
+
+            <div class="container services-hero__container">
+                <div class="services-hero__content">
+                    <p class="section-kicker section-kicker--dark">
+                        Appliance repair categories
+                    </p>
+
+                    <h1 id="services-hero-title">
+                        Compare Appliance Repair Provider Options With More Clarity
+                    </h1>
+
+                    <p>
+                        <span data-company-name>DOUTTO</span> helps homeowners explore local appliance repair provider
+                        categories for refrigerators, washers, dryers, dishwashers, ovens, and ranges.
+                    </p>
+
+                    <div class="services-hero__actions">
+                        <a class="btn btn--primary" href="./contact.html">
+                            Request Options
+                        </a>
+
+                        <a class="btn btn--ghost-light" href="#service-grid">
+                            Explore Categories
+                        </a>
+                    </div>
+                </div>
+
+                <aside class="services-hero__aside" aria-label="Provider comparison reminder">
+                    <div class="services-hero__aside-icon" aria-hidden="true">
+                        <i data-lucide="clipboard-check"></i>
+                    </div>
+
+                    <p class="services-hero__aside-label">Before selecting a provider</p>
+
+                    <ul>
+                        <li>Compare diagnostic fees and quote details</li>
+                        <li>Confirm service area and timing</li>
+                        <li>Ask about parts and warranty terms</li>
+                        <li>Verify licensing and insurance independently</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="section services-intro section--soft" id="platform-model" data-section="Model"
+            aria-labelledby="services-intro-title">
+            <div class="container services-intro__grid">
+                <div class="services-intro__content">
+                    <p class="section-kicker">Independent matching platform</p>
+
+                    <h2 id="services-intro-title">
+                        DOUTTO is designed for comparison, not direct appliance repair work.
+                    </h2>
+
+                    <p>
+                        <span data-company-name>DOUTTO</span> is not a contractor, appliance repair company, or local
+                        repair team. The platform helps homeowners organize provider options and compare local repair
+                        categories before contacting or choosing an independent company.
+                    </p>
+                </div>
+
+                <div class="services-intro__panel">
+                    <h3>What the platform helps you review</h3>
+
+                    <div class="services-intro__list">
+                        <div class="services-intro__item">
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
+                            <span>Local service area availability</span>
+                        </div>
+
+                        <div class="services-intro__item">
+                            <i data-lucide="wrench" aria-hidden="true"></i>
+                            <span>Appliance type and issue category</span>
+                        </div>
+
+                        <div class="services-intro__item">
+                            <i data-lucide="receipt-text" aria-hidden="true"></i>
+                            <span>Quote and diagnostic fee clarity</span>
+                        </div>
+
+                        <div class="services-intro__item">
+                            <i data-lucide="shield-check" aria-hidden="true"></i>
+                            <span>Homeowner verification reminders</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE GRID -->
+        <section class="section services-grid-section" id="service-grid" data-section="Services"
+            aria-labelledby="service-grid-title">
+            <div class="container">
+                <div class="section-heading section-heading--split">
+                    <div>
+                        <p class="section-kicker">Service categories</p>
+                        <h2 id="service-grid-title">Find Repair Services for Major Appliances</h2>
+                    </div>
+
+                    <p>
+                        Each category helps you compare independent provider options for a specific appliance issue.
+                    </p>
+                </div>
+
+                <div class="service-card-grid service-card-grid--services" data-service-cards="services"></div>
+            </div>
+        </section>
+
+        <!-- COMPARE FACTORS -->
+        <section class="section services-factors section--dark" id="compare-factors" data-section="Compare"
+            aria-labelledby="services-factors-title">
+            <div class="container services-factors__grid">
+                <div class="services-factors__content">
+                    <p class="section-kicker section-kicker--dark">What to compare</p>
+
+                    <h2 id="services-factors-title">
+                        Provider details can vary from one company to another.
+                    </h2>
+
+                    <p>
+                        Before choosing a provider, homeowners should compare practical details that affect scheduling,
+                        cost expectations, repair scope, and follow-up support.
+                    </p>
+
+                    <a class="btn btn--primary" href="./contact.html">
+                        Start Comparing
+                    </a>
+                </div>
+
+                <div class="services-factors__list" data-comparison-factors></div>
+            </div>
+        </section>
+
+        <!-- CATEGORY LENS -->
+        <section class="section services-lens section--soft" id="category-lens" data-section="Details"
+            aria-labelledby="services-lens-title">
+            <div class="container services-lens__grid">
+                <div class="services-lens__media" aria-hidden="true">
+                    <div class="services-lens__image"></div>
+
+                    <div class="services-lens__badge">
+                        <i data-lucide="search-check" aria-hidden="true"></i>
+                        <span>Compare before choosing</span>
+                    </div>
+                </div>
+
+                <div class="services-lens__content">
+                    <p class="section-kicker">Provider fit lens</p>
+
+                    <h2 id="services-lens-title">
+                        A repair category is only the starting point.
+                    </h2>
+
+                    <p>
+                        The right provider option can depend on appliance type, brand familiarity, parts availability,
+                        diagnostic process, timing, and whether the provider serves your ZIP code.
+                    </p>
+
+                    <div class="services-lens__checks">
+                        <div>
+                            <i data-lucide="check" aria-hidden="true"></i>
+                            <span>Ask whether the provider handles your appliance type.</span>
+                        </div>
+
+                        <div>
+                            <i data-lucide="check" aria-hidden="true"></i>
+                            <span>Request clear information about diagnostic fees and quote terms.</span>
+                        </div>
+
+                        <div>
+                            <i data-lucide="check" aria-hidden="true"></i>
+                            <span>Confirm availability, timing, service area, and warranty details.</span>
+                        </div>
+
+                        <div>
+                            <i data-lucide="check" aria-hidden="true"></i>
+                            <span>Verify licensing and insurance before making a hiring decision.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="section services-process" id="services-process" data-section="Process"
+            aria-labelledby="services-process-title">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <p class="section-kicker">Simple comparison flow</p>
+
+                    <h2 id="services-process-title">
+                        Move from appliance issue to provider comparison in a structured way.
+                    </h2>
+
+                    <p>
+                        DOUTTO keeps the process focused on categories, provider options, and homeowner verification.
+                    </p>
+                </div>
+
+                <div class="services-process__steps" data-platform-steps></div>
+            </div>
+        </section>
+
+        <!-- NOTICE -->
+        <section class="section services-notice section--soft" id="homeowner-reminder" data-section="Reminder"
+            aria-labelledby="services-notice-title">
+            <div class="container">
+                <div class="services-notice__card">
+                    <div class="services-notice__icon" aria-hidden="true">
+                        <i data-lucide="shield-alert"></i>
+                    </div>
+
+                    <div>
+                        <p class="section-kicker">Homeowner reminder</p>
+
+                        <h2 id="services-notice-title">
+                            DOUTTO does not replace your own provider verification.
+                        </h2>
+
+                        <p>
+                            Homeowners should independently confirm provider licensing, insurance, availability,
+                            pricing, diagnostic fees, warranty terms, and repair scope before choosing any company.
+                            Provider participation and coverage may vary by area.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="services-cta" id="services-cta" data-section="Start" aria-labelledby="services-cta-title">
+            <div class="services-cta__bg" aria-hidden="true"></div>
+
+            <div class="container services-cta__inner">
+                <p class="section-kicker section-kicker--dark">Request options</p>
+
+                <h2 id="services-cta-title">
+                    Ready to compare local appliance repair provider categories?
+                </h2>
+
+                <p>
+                    Explore categories, ask the right questions, and compare local provider options through
+                    <span data-company-name>DOUTTO</span>.
+                </p>
+
+                <div class="services-cta__actions">
+                    <a class="btn btn--primary" href="./contact.html">
+                        Request Options
+                    </a>
+
+                    <a class="btn btn--ghost-light" href="tel:+18885550148" data-phone-link>
+                        <span data-phone-text>(888) 555-0148</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div data-section-nav></div>
+    <div data-site-footer></div>
+    <div data-cookie-banner></div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="./js/config.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/services.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<svg
+    width="64"
+    height="64"
+    viewBox="0 0 64 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-labelledby="doutto-logo-title doutto-logo-desc"
+>
+    <title id="doutto-logo-title">DOUTTO logo icon</title>
+    <desc id="doutto-logo-desc">
+        Premium copper outline house frame icon for DOUTTO appliance repair provider matching platform.
+    </desc>
+
+    <path
+        d="M10 31.2L32 12L54 31.2"
+        stroke="#B87333"
+        stroke-width="3.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <path
+        d="M16.5 29.7V51.5H47.5V29.7"
+        stroke="#B87333"
+        stroke-width="3.4"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <path
+        d="M23.5 51.5V36.5H40.5V51.5"
+        stroke="#B87333"
+        stroke-width="3.1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <path
+        d="M27.3 31.2H36.7"
+        stroke="#D69A5B"
+        stroke-width="2.7"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M21.8 25.2L32 16.3L42.2 25.2"
+        stroke="#D69A5B"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        opacity="0.75"
+    />
+
+    <path
+        d="M39.6 38.8L46.2 32.2"
+        stroke="#D69A5B"
+        stroke-width="2.6"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M44.8 31L47.4 33.6"
+        stroke="#D69A5B"
+        stroke-width="2.3"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="M18.8 55H45.2"
+        stroke="#8F5528"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        opacity="0.85"
+    />
+
+    <path
+        d="M12.7 31.2L32 14.35L51.3 31.2"
+        stroke="#F2C28B"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        opacity="0.28"
+    />
+</svg>

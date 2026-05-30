@@ -1,0 +1,676 @@
+.services-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-graphite);
+    color: var(--color-text-light);
+}
+
+.services-hero__bg,
+.services-hero__overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.services-hero__bg {
+    background:
+        linear-gradient(90deg, rgba(23, 23, 23, 0.9), rgba(23, 23, 23, 0.55)),
+        url("../assets/images/hero-appliance-2.jpg") center / cover;
+    transform: scale(1.02);
+}
+
+.services-hero__overlay {
+    background:
+        radial-gradient(circle at 20% 30%, rgba(184, 115, 51, 0.18), transparent 28%),
+        linear-gradient(180deg, rgba(23, 23, 23, 0.12), rgba(23, 23, 23, 0.82));
+}
+
+.services-hero__container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    min-height: 620px;
+    grid-template-columns: minmax(0, 0.98fr) minmax(300px, 390px);
+    gap: 54px;
+    align-items: center;
+    padding: 82px 0;
+}
+
+.services-hero__content {
+    max-width: 760px;
+}
+
+.services-hero__content p:not(.section-kicker) {
+    max-width: 650px;
+    margin-top: 22px;
+    color: rgba(248, 245, 240, 0.82);
+    font-size: 1.08rem;
+    line-height: 1.72;
+}
+
+.services-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.services-hero__aside {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(214, 154, 91, 0.28);
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at top right, rgba(214, 154, 91, 0.18), transparent 38%),
+        rgba(23, 23, 23, 0.72);
+    padding: 28px;
+    box-shadow: 0 28px 85px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.services-hero__aside::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 28px;
+    width: 84px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-copper), var(--color-copper-light));
+}
+
+.services-hero__aside-icon {
+    display: inline-flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(214, 154, 91, 0.35);
+    border-radius: 18px;
+    color: var(--color-copper-light);
+    background: rgba(184, 115, 51, 0.14);
+}
+
+.services-hero__aside-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.services-hero__aside-label {
+    margin-top: 22px;
+    color: var(--color-copper-light);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.services-hero__aside ul {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.services-hero__aside li {
+    position: relative;
+    color: rgba(248, 245, 240, 0.78);
+    padding-left: 19px;
+    font-size: 0.93rem;
+}
+
+.services-hero__aside li::before {
+    content: "";
+    position: absolute;
+    top: 0.72em;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: var(--color-copper-light);
+}
+
+/* INTRO */
+
+.services-intro {
+    overflow: hidden;
+}
+
+.services-intro__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
+    gap: 42px;
+    align-items: center;
+}
+
+.services-intro__content h2 {
+    max-width: 680px;
+}
+
+.services-intro__content p:not(.section-kicker) {
+    margin-top: 20px;
+    color: var(--color-muted);
+    line-height: 1.75;
+}
+
+.services-intro__panel {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(184, 115, 51, 0.18);
+    border-radius: 26px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.72)),
+        var(--color-white);
+    padding: 28px;
+    box-shadow: var(--shadow-soft);
+}
+
+.services-intro__panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 28px;
+    width: 76px;
+    height: 2px;
+    background: var(--color-copper);
+}
+
+.services-intro__panel h3 {
+    max-width: 320px;
+    color: var(--color-text);
+    font-size: 1.25rem;
+}
+
+.services-intro__list {
+    display: grid;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.services-intro__item {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: rgba(247, 244, 239, 0.74);
+    padding: 12px;
+}
+
+.services-intro__item svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-copper);
+}
+
+.services-intro__item span {
+    color: var(--color-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+/* SERVICE GRID */
+
+.services-grid-section {
+    background:
+        radial-gradient(circle at 12% 8%, rgba(184, 115, 51, 0.08), transparent 28%),
+        var(--color-soft-white);
+}
+
+.service-card-grid--services .service-card {
+    min-height: 430px;
+}
+
+/* FACTORS */
+
+.services-factors {
+    overflow: hidden;
+}
+
+.services-factors::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    background:
+        linear-gradient(90deg, rgba(214, 154, 91, 0.055) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(214, 154, 91, 0.05) 1px, transparent 1px);
+    background-size: 70px 70px;
+    mask-image: linear-gradient(180deg, transparent 0%, #000 24%, #000 76%, transparent 100%);
+}
+
+.services-factors__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.24fr);
+    gap: 44px;
+    align-items: start;
+}
+
+.services-factors__content {
+    position: sticky;
+    top: calc(var(--header-height) + 30px);
+}
+
+.services-factors__content p:not(.section-kicker) {
+    margin-top: 18px;
+    color: var(--color-muted-light);
+    line-height: 1.75;
+}
+
+.services-factors__content .btn {
+    margin-top: 28px;
+}
+
+.services-factors__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.services-factors .comparison-factor {
+    border-color: rgba(255, 255, 255, 0.12);
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035)),
+        rgba(23, 23, 23, 0.68);
+    box-shadow: none;
+}
+
+.services-factors .comparison-factor:hover {
+    border-color: rgba(214, 154, 91, 0.42);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
+}
+
+.services-factors .comparison-factor h3 {
+    color: var(--color-white);
+}
+
+.services-factors .comparison-factor p {
+    color: var(--color-muted-light);
+}
+
+/* LENS */
+
+.services-lens {
+    overflow: hidden;
+}
+
+.services-lens__grid {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.services-lens__media {
+    position: relative;
+    min-height: 520px;
+}
+
+.services-lens__image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 30px;
+    background:
+        linear-gradient(180deg, rgba(23, 23, 23, 0.08), rgba(23, 23, 23, 0.34)),
+        url("../assets/images/hero-appliance-3.jpg") center / cover;
+    box-shadow: var(--shadow-soft);
+}
+
+.services-lens__image::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 22px;
+    pointer-events: none;
+}
+
+.services-lens__badge {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(214, 154, 91, 0.38);
+    border-radius: 999px;
+    background: rgba(23, 23, 23, 0.78);
+    color: var(--color-white);
+    padding: 12px 16px;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.services-lens__badge svg {
+    width: 18px;
+    height: 18px;
+    color: var(--color-copper-light);
+}
+
+.services-lens__badge span {
+    font-size: 0.86rem;
+    font-weight: 800;
+}
+
+.services-lens__content p:not(.section-kicker) {
+    margin-top: 20px;
+    color: var(--color-muted);
+    line-height: 1.75;
+}
+
+.services-lens__checks {
+    display: grid;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.services-lens__checks div {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+    align-items: start;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: var(--color-white);
+    padding: 14px 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.045);
+}
+
+.services-lens__checks svg {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    color: var(--color-copper);
+}
+
+.services-lens__checks span {
+    color: var(--color-muted);
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
+/* PROCESS */
+
+.services-process {
+    background:
+        radial-gradient(circle at 80% 10%, rgba(184, 115, 51, 0.08), transparent 30%),
+        var(--color-soft-white);
+}
+
+.services-process__steps {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.services-process__steps::before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    right: 9%;
+    left: 9%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(184, 115, 51, 0.42), transparent);
+}
+
+.services-process .platform-step {
+    border-color: var(--color-border);
+    background: var(--color-white);
+    color: var(--color-text);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.055);
+}
+
+.services-process .platform-step:hover {
+    border-color: rgba(184, 115, 51, 0.36);
+    background: var(--color-white);
+    box-shadow: var(--shadow-soft);
+}
+
+.services-process .platform-step h3 {
+    color: var(--color-text);
+}
+
+.services-process .platform-step p {
+    color: var(--color-muted);
+}
+
+/* NOTICE */
+
+.services-notice {
+    overflow: hidden;
+}
+
+.services-notice__card {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+    align-items: start;
+    overflow: hidden;
+    border: 1px solid rgba(184, 115, 51, 0.2);
+    border-radius: 30px;
+    background:
+        linear-gradient(135deg, rgba(184, 115, 51, 0.12), transparent 42%),
+        var(--color-white);
+    padding: 34px;
+    box-shadow: var(--shadow-soft);
+}
+
+.services-notice__icon {
+    display: inline-flex;
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(184, 115, 51, 0.24);
+    border-radius: 20px;
+    color: var(--color-copper);
+    background: var(--color-copper-soft);
+}
+
+.services-notice__icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.services-notice__card h2 {
+    max-width: 760px;
+}
+
+.services-notice__card p:not(.section-kicker) {
+    max-width: 880px;
+    margin-top: 16px;
+    color: var(--color-muted);
+    line-height: 1.75;
+}
+
+/* CTA */
+
+.services-cta {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-graphite);
+    color: var(--color-text-light);
+}
+
+.services-cta__bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(23, 23, 23, 0.92), rgba(23, 23, 23, 0.72)),
+        url("../assets/images/cta-appliance-repair.jpg") center / cover;
+}
+
+.services-cta__bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 25%, rgba(214, 154, 91, 0.18), transparent 28%),
+        linear-gradient(180deg, transparent, rgba(23, 23, 23, 0.44));
+}
+
+.services-cta__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    min-height: 430px;
+    align-content: center;
+    justify-items: center;
+    padding: 84px 0;
+    text-align: center;
+}
+
+.services-cta h2 {
+    max-width: 800px;
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.services-cta p:not(.section-kicker) {
+    max-width: 680px;
+    margin-top: 18px;
+    color: var(--color-muted-light);
+    line-height: 1.7;
+}
+
+.services-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1280px) {
+    .services-hero__container {
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+        gap: 34px;
+    }
+
+    .services-process__steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-process__steps::before {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .services-hero__container,
+    .services-intro__grid,
+    .services-factors__grid,
+    .services-lens__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-hero__container {
+        min-height: auto;
+        padding: 92px 0;
+    }
+
+    .services-hero__aside {
+        max-width: 620px;
+    }
+
+    .services-factors__content {
+        position: static;
+    }
+
+    .services-lens__media {
+        min-height: 420px;
+        order: 2;
+    }
+
+    .services-lens__content {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero__container {
+        padding: 78px 0;
+    }
+
+    .services-hero__content p:not(.section-kicker) {
+        font-size: 1rem;
+    }
+
+    .services-hero__aside,
+    .services-intro__panel,
+    .services-notice__card {
+        border-radius: 22px;
+        padding: 24px;
+    }
+
+    .services-hero__actions,
+    .services-cta__actions {
+        display: grid;
+        width: 100%;
+    }
+
+    .services-factors__list,
+    .services-process__steps {
+        grid-template-columns: 1fr;
+    }
+
+    .services-lens__media {
+        min-height: 340px;
+    }
+
+    .services-lens__badge {
+        right: 16px;
+        bottom: 16px;
+        max-width: calc(100% - 32px);
+        border-radius: 18px;
+    }
+
+    .services-notice__card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-hero__container {
+        padding: 64px 0;
+    }
+
+    .services-hero__aside-icon,
+    .services-notice__icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 18px;
+    }
+
+    .services-lens__media {
+        min-height: 300px;
+    }
+
+    .services-lens__image {
+        border-radius: 22px;
+    }
+
+    .services-lens__image::after {
+        inset: 12px;
+        border-radius: 16px;
+    }
+
+    .services-lens__checks div {
+        grid-template-columns: 1fr;
+    }
+
+    .services-cta__inner {
+        min-height: 380px;
+        padding: 68px 0;
+    }
+}
