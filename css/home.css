@@ -1405,3 +1405,130 @@
         opacity: 0.45;
     }
 }
+
+/* MOBILE FIX: home compare section */
+@media (max-width: 640px) {
+    section.home-compare {
+        padding: 46px 0 54px !important;
+        background:
+            radial-gradient(circle at 50% 0%, rgba(184, 115, 51, 0.12), transparent 34%),
+            linear-gradient(180deg, var(--color-soft-white), var(--color-warm-surface)) !important;
+    }
+
+    section.home-compare>.home-compare__grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: min(100% - 24px, 520px) !important;
+        margin-inline: auto !important;
+        padding: 0 !important;
+        border: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    section.home-compare .home-compare__content {
+        position: static !important;
+        display: grid !important;
+        justify-items: center !important;
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    section.home-compare .home-compare__content h2 {
+        max-width: 100% !important;
+        text-align: center !important;
+        font-size: clamp(1.85rem, 8vw, 2.35rem) !important;
+        line-height: 1.08 !important;
+    }
+
+    section.home-compare .home-compare__content>p:not(.section-kicker) {
+        max-width: 100% !important;
+        margin: 16px auto 0 !important;
+        text-align: center !important;
+        font-size: 0.94rem !important;
+        line-height: 1.68 !important;
+    }
+
+    section.home-compare .home-compare__note {
+        display: grid !important;
+        grid-template-columns: 38px 1fr !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin: 22px auto 0 !important;
+        padding: 16px !important;
+        border-radius: 18px !important;
+        text-align: left !important;
+        background: rgba(184, 115, 51, 0.09) !important;
+        box-shadow: none !important;
+    }
+
+    section.home-compare .home-compare__note svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    section.home-compare .home-compare__note span {
+        font-size: 0.86rem !important;
+        line-height: 1.55 !important;
+    }
+
+    section.home-compare .home-compare__factors {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    section.home-compare .comparison-factor {
+        position: relative !important;
+        display: block !important;
+        min-height: 118px !important;
+        width: 100% !important;
+        padding: 18px 72px 18px 18px !important;
+        border-radius: 18px !important;
+        text-align: left !important;
+        background:
+            linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(247, 244, 239, 0.82)),
+            var(--color-white) !important;
+        border: 1px solid rgba(43, 43, 43, 0.1) !important;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.055) !important;
+    }
+
+    section.home-compare .comparison-factor__icon {
+        position: absolute !important;
+        top: 18px !important;
+        right: 18px !important;
+        width: 42px !important;
+        height: 42px !important;
+        margin: 0 !important;
+        border-radius: 14px !important;
+    }
+
+    section.home-compare .comparison-factor__icon svg {
+        width: 21px !important;
+        height: 21px !important;
+    }
+
+    section.home-compare .comparison-factor h3 {
+        max-width: 100% !important;
+        margin-top: 0 !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+        font-size: 0.98rem !important;
+        line-height: 1.25 !important;
+    }
+
+    section.home-compare .comparison-factor p {
+        max-width: 100% !important;
+        margin-top: 8px !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+        font-size: 0.84rem !important;
+        line-height: 1.5 !important;
+    }
+
+    section.home-compare .comparison-factor:hover {
+        transform: translateY(-3px) !important;
+    }
+}

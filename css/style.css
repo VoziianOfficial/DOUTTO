@@ -1903,3 +1903,106 @@ p {
         gap: 10px;
     }
 }
+
+/* TABLET + MOBILE: center all h1 / h2 evenly */
+@media (max-width: 1024px) {
+
+    h1,
+    h2,
+    .section-heading h2,
+    .section h2 {
+        width: 100%;
+        max-width: 920px;
+        margin-inline: auto;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .section-heading,
+    .section-heading--center,
+    .section-heading--split,
+    .home-hero__content,
+    .services-hero__content,
+    .about-hero__content,
+    .contact-hero__content,
+    .service-hero__content,
+    .legal-hero__content,
+    .home-compare__content,
+    .services-factors__content,
+    .service-compare__content,
+    .about-role__content,
+    .about-verification__content,
+    .contact-form-section__content,
+    .contact-reminder__content,
+    .home-faq__heading,
+    .contact-faq__heading,
+    .service-faq__heading {
+        width: 100%;
+        max-width: 920px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .section-heading--split {
+        justify-items: center;
+    }
+
+    .section-heading--split>div,
+    .section-heading--split>p {
+        width: 100%;
+        max-width: 820px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .section-heading--split .text-link,
+    .section-heading .text-link {
+        margin-inline: auto;
+    }
+
+    .section-kicker {
+        justify-content: center;
+        margin-inline: auto;
+    }
+
+    .section-kicker::before {
+        width: 32px;
+    }
+
+    .home-hero__text,
+    .services-hero__content p:not(.section-kicker),
+    .about-hero__content p:not(.section-kicker),
+    .contact-hero__content p:not(.section-kicker),
+    .service-hero__content p:not(.section-kicker),
+    .legal-hero__content p:not(.section-kicker),
+    .section-heading p,
+    .home-compare__content p,
+    .services-factors__content p:not(.section-kicker),
+    .service-compare__content p:not(.section-kicker),
+    .about-role__content p:not(.section-kicker),
+    .about-verification__content p:not(.section-kicker),
+    .contact-form-section__content p:not(.section-kicker),
+    .contact-reminder__content p:not(.section-kicker),
+    .home-faq__heading p:not(.section-kicker),
+    .contact-faq__heading p:not(.section-kicker),
+    .service-faq__heading p:not(.section-kicker) {
+        max-width: 760px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .home-hero__actions,
+    .services-hero__actions,
+    .about-hero__actions,
+    .contact-hero__actions,
+    .service-hero__actions {
+        justify-content: center;
+    }
+
+    .home-compare__note,
+    .contact-form-section__note {
+        max-width: 720px;
+        margin-inline: auto;
+        text-align: left;
+    }
+}
